@@ -7,8 +7,8 @@ typedef int Status;
 typedef int ElemType;
 typedef struct
 {
-    ElemType data[MAXSIZE]; // 存储元素的数组
-    int length;             // 当前长度
+    ElemType data[MAX_SIZE]; // 存储元素的数组
+    int length;              // 当前长度
 } SqList;
 
 Status GetElem(SqList L, int i, ElemType *e)
@@ -24,7 +24,7 @@ Status GetElem(SqList L, int i, ElemType *e)
 Status ListInsert(SqList *L, int i, ElemType e)
 {
     int k;
-    if (L->length == MAXSIZE) // 存储空间已满
+    if (L->length == MAX_SIZE) // 存储空间已满
     {
         return ERROR;
     }
