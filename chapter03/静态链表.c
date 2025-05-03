@@ -99,7 +99,3 @@ void Free_SLL(StaticLinkList space, int i)
   space[i].cur = space[0].cur;
   space[0].cur = i;
 }
-
-// 静态列表的优缺点
-// 优点：插入和删除只需要修改游标，不需要移动元素
-// 缺点：1. 没有解决连续存储分配带来的表长难以确定的问题；2. 失去了顺序存储结构的随机存储特性
