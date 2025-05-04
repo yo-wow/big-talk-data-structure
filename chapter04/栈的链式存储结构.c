@@ -4,14 +4,14 @@
 #define FALSE 0
 typedef int Status;
 typedef int SElemType;
-typedef struct StackNode
+typedef struct
 {
   SElemType data;         // 存储当前结点的数据
   struct StackNode *next; // 指向下一个结点的指针
 } StackNode,              // 链栈的结点，包含数据域 data 和指针域 next
     *LinkStackPtr;        // 指向 StackNode 的指针类型别名（等同于 StackNode*）
 
-typedef struct LinkStack
+typedef struct
 {
   LinkStackPtr top; // 栈顶指针（指向最新入栈的结点）
   int count;        // 栈中元素个数

@@ -426,3 +426,30 @@ Operation
 ## 4.10 队列的链式存储结构
 
 队列的链式存储结构，其实就是线性表的单链表，只不过它只能尾进头出而已，简称链队列。
+
+# 5. 串
+
+> 启示
+>
+> 串（string）是由零个或多个字符组成的有限序列，又名叫字符串。
+
+## 5.1 串的抽象数据类型
+
+```
+ADT 串（string）
+Data
+  串中元素仅由一个字符组成，相邻元素具有前驱和后继关系。
+Operation
+  StrAssign(T, *chars)：生成一个其值等于字符串常量chars的串T。
+  StrCopy(T, S)：串 S 存在，由串 S 复制得串 T。
+  ClearString(S)：串 S 存在，将串清空。
+  StringEmpty(S)：若串 S 为空，则返回真，否则返回假。
+  StrLength(S)：返回串 S 的元素个数，即串的长度。
+  StrCompare(S1, S2)： 若 S1 = S2，则返回 0；若 S1 < S2，则返回 < 0；若 S1 > S2，则返回 > 0。
+  Concat(T, S1, S2)：串 S1、S2 存在，将串 S1 和串 S2 连接，得串 T。
+  SubString(Sub, S, pos, len)：串 S 存在，1<=pos<=StrLength(S)，且0<=len<=StrLength(S)-pos+1，用 Sub 返回串 S 中从第 pos 个字符起长度为 len 的子串。
+  Index(S1, S2, pos)：串 S1、S2 存在，1<=pos<=StrLength(S1)，返回串 S1 中从第 pos 个字符起第一次出现的串 S2 的位置，若不存在，则返回 0。
+  Replace(S, old, new)：串 S、old、new 存在，old 是非空串，用 new 替换主串 S 中出现的所有与 old 相等的不重叠的子串。
+  StrInsert(S, pos, T)：串 S、T 存在，1<=pos<=StrLength(S)+1，在串 S 的第 pos 个字符之前插入串 T。
+  StrDelete(S, pos, len)：串 S 存在，1<=pos<=StrLength(S)-len+1，删除串 S 中从第 pos 个字符起长度为 len 的子串。
+```

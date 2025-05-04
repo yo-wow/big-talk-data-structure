@@ -6,7 +6,7 @@
 #define MAXSIZE 20
 typedef int Status;
 typedef int QElemType;
-typedef struct QNode // 结点结构
+typedef struct // 结点结构
 {
   QElemType data;
   struct QNode *next;
